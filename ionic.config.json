@@ -1,0 +1,7 @@
+{
+  "name": "listApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
