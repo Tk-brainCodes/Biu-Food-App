@@ -17,7 +17,6 @@ const HomepageScreen = () => {
   const getValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setValue(value);
-    console.log(value);
   };
 
   useEffect(() => {
