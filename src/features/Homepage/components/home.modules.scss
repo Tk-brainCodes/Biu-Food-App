@@ -1,0 +1,91 @@
+@import "../../../styles/breakpoint";
+@import "../../../styles/converter";
+@import "../../../styles/variables";
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage {
+  width: 100vw;
+  height: auto !important;
+  &_container {
+    &_text {
+      width: 100vw;
+      height: auto !important;
+      font-size: to-rem(18.3287);
+      line-height: 22px;
+      font-weight: 600;
+      @include flexCenter;
+      flex-direction: column;
+
+      &_phoneinput {
+        margin-top: to-rem(60);
+        margin-bottom: to-rem(30);
+        padding: 1em 2.7em;
+        border: 1px solid $biufood_black;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+
+      &_error {
+        color: red;
+        font-weight: 400;
+        font-size: to-rem(16);
+      }
+
+      span {
+        color: $biufood_orange;
+      }
+
+      &_btn {
+        padding: 1.3em 9.5em;
+        background-color: $biufood_orange;
+        font-weight: 700;
+        line-height: 22px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+    }
+
+    &_wrapper {
+      @include flexCenter;
+      background-image: url("../../../assets//images/food.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100vw;
+      height: 65vh;
+      background-color: grey;
+    }
+  }
+  &_splashscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50px);
+      }
+    }
+
+    &_animate {
+      animation: bounce 0.8s infinite alternate;
+      -webkit-animation: bounce 0.8s infinite alternate;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import "variables";
+@import "converter";
+@import "breakpoint";
+@import "normalize";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  font-size: 100%;
+}
+
+::selection {
+  background: $manual-light-green;
+  color: #fff;
+  text-shadow: none;
+}
+
+body {
+  font-family: Helvetica, Arial, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 auto;
+  color: $manual-green;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+
+  &:focus,
+  &:visited,
+  &:active {
+    outline: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  color: $manual-green;
+}
+
+img {
+  touch-action: manipulation;
+}
+strong {
+  color: $manual-green;
+  font-weight: 600;
+}
