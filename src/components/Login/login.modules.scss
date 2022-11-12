@@ -1,0 +1,62 @@
+@import "../../styles/breakpoint";
+@import "../../styles/converter";
+@import "../../styles/variables";
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  @include flexCenter;
+  flex-direction: column;
+
+  &_forgot {
+    color: $biufood_orange;
+    margin-left: to-rem(175);
+  }
+  &_connect {
+    font-size: to-rem(14.2791);
+    line-height: to-rem(17);
+    margin-top: to-rem(20);
+  }
+  &_google {
+    @include flexCenter;
+    gap: 5px;
+    cursor: pointer;
+  }
+  button {
+    padding: 0.6em 2.7em;
+    background-color: $biufood_orange;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: to-rem(40);
+    font-size: to-rem(18.3287);
+    border-radius: to-rem(4.58219);
+    -webkit-border-radius: to-rem(4.58219);
+    -moz-border-radius: to-rem(4.58219);
+    -ms-border-radius: to-rem(4.58219);
+    -o-border-radius: to-rem(4.58219);
+  }
+  &_imagecontainer {
+    background-image: url("../../assets/images/loginImage.png");
+    width: 306px;
+    height: 159px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &_input {
+    margin-top: to-rem(30);
+    margin-bottom: to-rem(5);
+    padding: 1.3em 3.7em;
+    border: 1px solid $biufood_black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}

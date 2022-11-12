@@ -1,0 +1,59 @@
+@import "../../styles/breakpoint";
+@import "../../styles/converter";
+@import "../../styles/variables";
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin custom_input {
+  margin-bottom: to-rem(5);
+  padding: 1.3em 3.6em;
+  border: 1px solid $biufood_black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.signup {
+  &_input {
+    @include flexCenter;
+    flex-direction: column;
+
+    &_customfirst {
+      @include custom_input;
+    }
+
+    &_custom {
+      margin-top: to-rem(15);
+      @include custom_input;
+    }
+    button {
+      padding: 0.6em 2.7em;
+      background-color: $biufood_orange;
+      font-weight: 700;
+      line-height: 22px;
+      margin-top: to-rem(40);
+      font-size: to-rem(18.3287);
+      border-radius: to-rem(4.58219);
+      -webkit-border-radius: to-rem(4.58219);
+      -moz-border-radius: to-rem(4.58219);
+      -ms-border-radius: to-rem(4.58219);
+      -o-border-radius: to-rem(4.58219);
+    }
+
+    &_login {
+      margin-top: to-rem(30);
+      font-weight: 400;
+      font-size: to-rem(18.3287);
+
+      span {
+        color: $biufood_orange;
+      }
+    }
+  }
+}
