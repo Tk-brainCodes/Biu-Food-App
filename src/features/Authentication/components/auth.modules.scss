@@ -1,0 +1,57 @@
+@import "../../../styles/breakpoint";
+@import "../../../styles/converter";
+@import "../../../styles/variables";
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin custom {
+  font-size: to-rem(20.6198p);
+  font-weight: 500;
+  line-height: 25px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  width: 173px;
+  height: 56px;
+}
+.auth {
+  @include flexCenter;
+  flex-direction: column;
+
+  &_tabcontainer {
+    margin-top: to-rem(35);
+  }
+
+  &_tabview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 346px;
+    height: 57px;
+    background-color: $biufood_grey;
+    margin-top: to-rem(20);
+    border: 1px solid $biufood_black;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+
+    &_button {
+      color: $biufood_textxcolor;
+      background-color: $biufood_grey;
+      @include custom;
+    }
+    &_active {
+      @include custom;
+      color: $biufood_white;
+      background-color: $biufood_orange;
+    }
+  }
+}
