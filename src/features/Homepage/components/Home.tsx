@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./home.modules.scss";
 import { SplashLogo, ThemeLogo } from "../../../assets/svg";
+import { useHistory } from "react-router";
 
 const SplashScreen = () => {
   return (
@@ -11,8 +12,9 @@ const SplashScreen = () => {
 };
 
 const HomepageScreen = () => {
-  const [loadingScreen, setLoadingScreen] = useState(true);
-  const [value, setValue] = useState("");
+  const [loadingScreen, setLoadingScreen] = useState<Boolean>(true);
+  const [value, setValue] = useState<string>("");
+  const history = useHistory();
 
   const getValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -22,7 +24,7 @@ const HomepageScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoadingScreen(false);
-    }, 4000);
+    }, 2000);
   }, []);
 
   return (
@@ -35,25 +37,33 @@ const HomepageScreen = () => {
             <ThemeLogo />
           </div>
           <div className='homepage_container_text'>
-            {value.length > 11 ? (
-              <p className='homepage_container_text_error'>
-                Incorrect phone number
-              </p>
-            ) : (
-              ""
-            )}
-
             <input
               id='input'
               value={value}
               onChange={getValue}
-              type='tel'
-              className='homepage_container_text_phoneinput'
-              placeholder='NGN |+234'
+              type='email'
+              className='homepage_container_text_emailinput'
+              placeholder='useremail@gmail.com'
             />
-            <button className='homepage_container_text_btn'>GET STARTED</button>
+            <button
+              className='homepage_container_text_btn'
+              onClick={(e) => {
+                e.preventDefault();
+                history.push("/auth");
+              }}
+            >
+              GET STARTED
+            </button>
             <p>
-              <span>Sign Up</span> get started with Food Vendors
+              {/* <span
+                onClick={(e) => {
+                  e.preventDefault();
+                  history.push("/auth");
+                }}
+              >
+                Sign Up
+              </span> */}
+              Get started with Food Vendors
             </p>
           </div>
         </div>
