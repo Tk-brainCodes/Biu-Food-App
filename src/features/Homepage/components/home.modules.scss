@@ -21,22 +21,16 @@
       @include flexCenter;
       flex-direction: column;
 
-      &_phoneinput {
+      &_emailinput {
         margin-top: to-rem(60);
         margin-bottom: to-rem(30);
-        padding: 1em 2.7em;
+        padding: 1em 2.85em;
         border: 1px solid $biufood_black;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-      }
-
-      &_error {
-        color: red;
-        font-weight: 400;
-        font-size: to-rem(16);
       }
 
       span {
@@ -63,7 +57,7 @@
       background-repeat: no-repeat;
       background-position: center;
       width: 100vw;
-      height: 65vh;
+      height: 50vh;
       background-color: grey;
     }
   }
