@@ -7,6 +7,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  height: auto !important;
+  overflow-y: scroll;
 
   font-size: 100%;
 }
