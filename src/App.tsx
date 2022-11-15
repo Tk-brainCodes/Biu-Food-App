@@ -3,6 +3,9 @@ import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { HomepageScreen } from "./features/Homepage/components";
 import { AuthPage } from "./features/Authentication/components";
+import { Verification } from "./components";
+import { NewPassword } from "./components";
+
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -34,6 +37,12 @@ const App: React.FC = () => (
         <Redirect exact from='/' to='/home' />
         <Route exact path='/auth'>
           <AuthPage />
+        </Route>
+        <Route exact path='/verification'>
+          <Verification />
+        </Route>
+        <Route exact path='/NewPassword'>
+          <NewPassword />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
