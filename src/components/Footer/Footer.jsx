@@ -8,7 +8,7 @@ import AccountIcon from '../../assets/svg/AccountIcon.svg'
 
 const Footer = () => {
   return (
-    <div className='flex items-center justify-center m-auto gap-10 mt-[5rem] mb-[1rem]'>
+    <div className='flex items-center justify-center m-auto gap-10 mt-[5rem] p-4 sticky bottom-0 left-0 bg-black'>
         <div className='cursor-pointer'>
             <img src={HomeIcon} alt="" />
         </div>
