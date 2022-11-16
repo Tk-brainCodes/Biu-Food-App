@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import HeadBtn from '../HeadBtn/HeadBtn'
+import { useHistory } from 'react-router'
 
 const Verification = () => {
   const [input, setInput] = useState({
@@ -14,6 +15,8 @@ const Verification = () => {
   const handleChange = (e) => {
     setInput({...input, [e.target.name] : [e.target.value]})
   }
+
+  const history = useHistory()
 
   return (
     <div className='max-w-[100%] m-auto flex items-center flex-col mt-10'>
@@ -71,7 +74,13 @@ const Verification = () => {
             />
           </div>
           <div className='flex items-center justify-center mt-[10rem]'>
-            <button className='bg-[#FF4545] px-[3rem] py-[0.7rem] rounded-lg cursor-pointer font-bold'>
+            <button 
+              className='bg-[#FF4545] px-[3rem] py-[0.7rem] rounded-lg cursor-pointer font-bold'
+              onClick={(e) => {
+                e.preventDefault();
+                history.push("/auth");
+              }}
+            >
               Proceed
             </button>
           </div>

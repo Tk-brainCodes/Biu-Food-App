@@ -32,7 +32,14 @@ const Login = () => {
           history.push("/NewPassword");
         }}
       >Forgot Password?</p>
-      <button>LOG IN</button>
+      <button
+      onClick={(e) => {
+        e.preventDefault();
+        history.push("/MainHome");
+      }}
+      >
+        LOG IN
+      </button>
       <p className='login_connect'>Or connect using</p>
       <p className='login_google'>
         <GoogleIcon /> Google
