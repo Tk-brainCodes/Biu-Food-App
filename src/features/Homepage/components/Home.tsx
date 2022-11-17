@@ -14,7 +14,7 @@ const SplashScreen = () => {
 const HomepageScreen = () => {
   const [loadingScreen, setLoadingScreen] = useState<Boolean>(true);
   const [value, setValue] = useState<string>("");
-  const history = useHistory();
+  const history  = useHistory();
 
   const getValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;

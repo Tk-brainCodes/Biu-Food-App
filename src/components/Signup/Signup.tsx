@@ -1,7 +1,10 @@
 import React from "react";
 import "./signup.modules.scss";
 
+import { useHistory } from "react-router"
+
 const Signup = () => {
+  const history = useHistory()
   return (
     <div className='signup'>
       <div className='signup_input'>
@@ -30,7 +33,14 @@ const Signup = () => {
           placeholder='Confirm password'
           className='signup_input_custom'
         />
-        <button>Create Account</button>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            history.push("/verification");
+          }}
+        >
+          Create Account
+        </button>
         <p className='signup_input_login'>
           Already have an account? <span>Login here</span>
         </p>

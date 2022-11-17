@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { GoogleIcon } from "../../assets/svg";
 import "./login.modules.scss";
 
+import { useHistory } from "react-router";
+
 const Login = () => {
   const [email, setEmail] = useState<string>("");
 
@@ -9,6 +11,8 @@ const Login = () => {
     const value = e.target.value;
     setEmail(value);
   };
+
+  const history = useHistory()
 
   return (
     <div className='login'>
@@ -21,8 +25,21 @@ const Login = () => {
         value={email}
         onChange={getValue}
       />
-      <p className='login_forgot'>Forgot Password?</p>
-      <button>LOG IN</button>
+      <p 
+        className='login_forgot cursor-pointer'
+        onClick={(e) => {
+          e.preventDefault();
+          history.push("/NewPassword");
+        }}
+      >Forgot Password?</p>
+      <button
+      onClick={(e) => {
+        e.preventDefault();
+        history.push("/MainHome");
+      }}
+      >
+        LOG IN
+      </button>
       <p className='login_connect'>Or connect using</p>
       <p className='login_google'>
         <GoogleIcon /> Google

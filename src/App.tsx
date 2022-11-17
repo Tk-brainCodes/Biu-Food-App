@@ -3,6 +3,10 @@ import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { HomepageScreen } from "./features/Homepage/components";
 import { AuthPage } from "./features/Authentication/components";
+import { Verification } from "./components";
+import { NewPassword } from "./components";
+import { MainHome } from "./features/MainHome";
+
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -27,13 +31,22 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonRouterOutlet>
+      <IonRouterOutlet style={{overflow: 'auto'}}>
         <Route exact path='/home'>
           <HomepageScreen />
         </Route>
         <Redirect exact from='/' to='/home' />
         <Route exact path='/auth'>
           <AuthPage />
+        </Route>
+        <Route exact path='/verification'>
+          <Verification />
+        </Route>
+        <Route exact path='/NewPassword'>
+          <NewPassword />
+        </Route>
+        <Route exact path='/MainHome'>
+          <MainHome />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
