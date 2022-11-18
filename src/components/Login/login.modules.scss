@@ -25,6 +25,7 @@
     @include flexCenter;
     gap: 5px;
     cursor: pointer;
+    margin-top: to-rem(20);
   }
   button {
     padding: 0.6em 2.7em;
@@ -51,7 +52,7 @@
   &_input {
     margin-top: to-rem(30);
     margin-bottom: to-rem(5);
-    padding: 1.3em 3.7em;
+    padding: 1em 3.7em;
     border: 1px solid $biufood_black;
     border-radius: 10px;
     -webkit-border-radius: 10px;
