@@ -41,9 +41,7 @@ const Signup = () => {
         >
           Create Account
         </button>
-        <p className='signup_input_login'>
-          Already have an account? <span>Login here</span>
-        </p>
+ 
       </div>
     </div>
   );

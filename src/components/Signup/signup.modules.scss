@@ -37,7 +37,8 @@
       background-color: $biufood_orange;
       font-weight: 700;
       line-height: 22px;
-      margin-top: to-rem(40);
+      margin-top: to-rem(30);
+      margin-bottom: to-rem(40);
       font-size: to-rem(18.3287);
       border-radius: to-rem(4.58219);
       -webkit-border-radius: to-rem(4.58219);
@@ -46,14 +47,14 @@
       -o-border-radius: to-rem(4.58219);
     }
 
-    &_login {
-      margin-top: to-rem(30);
-      font-weight: 400;
-      font-size: to-rem(18.3287);
+    // &_login {
+    //   margin-top: to-rem(30);
+    //   font-weight: 400;
+    //   font-size: to-rem(18.3287);
 
-      span {
-        color: $biufood_orange;
-      }
-    }
+    //   span {
+    //     color: $biufood_orange;
+    //   }
+    // }
   }
 }

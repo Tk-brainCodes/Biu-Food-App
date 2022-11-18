@@ -21,6 +21,10 @@
       @include flexCenter;
       flex-direction: column;
 
+      p {
+        margin-top: to-rem(30);
+      }
+
       &_emailinput {
         margin-top: to-rem(60);
         margin-bottom: to-rem(30);
@@ -38,7 +42,7 @@
       }
 
       &_btn {
-        padding: 1.3em 9.5em;
+        padding: 0.7em 5.6em;
         background-color: $biufood_orange;
         font-weight: 700;
         line-height: 22px;
@@ -47,7 +51,7 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-      }
+      } 
     }
 
     &_wrapper {
