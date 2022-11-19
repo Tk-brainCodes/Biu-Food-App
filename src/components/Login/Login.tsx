@@ -1,50 +1,69 @@
-import React, { useState } from "react";
+import React from "react";
 import { GoogleIcon } from "../../assets/svg";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useHistory } from "react-router";
 import "./login.modules.scss";
 
-import { useHistory } from "react-router";
+type FormValues = {
+  email: string;
+  matNumber: string;
+  password: string;
+};
 
 const Login = () => {
-  const [email, setEmail] = useState<string>("");
-
-  const getValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setEmail(value);
-  };
- 
-  const history = useHistory()
+  const history = useHistory();
+  const { register, handleSubmit } = useForm<FormValues>();
+  const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
 
   return (
-    <div className='login'>
+    <form onSubmit={handleSubmit(onSubmit)} className='login'>
       <div className='login_imagecontainer' />
       <input
+        id='input'
+        type='name'
+        className='login_input'
+        placeholder='Mat Number'
+        {...register("matNumber")}
+        required
+      />
+      <input
+        id='input'
+        type='email'
+        className='login_input'
+        placeholder='useremail@gmail.com'
+        {...register("email")}
+        required
+      />
+      <input
         type='password'
-        name='password'
         placeholder='password'
         className='login_input'
-        value={email}
-        onChange={getValue}
+        {...register("password")}
+        required
       />
-      <p 
+      <p
         className='login_forgot cursor-pointer'
         onClick={(e) => {
           e.preventDefault();
           history.push("/NewPassword");
         }}
-      >Forgot Password?</p>
-      <button
-      onClick={(e) => {
-        e.preventDefault();
-        history.push("/MainHome");
-      }}
       >
-        LOG IN
-      </button>
+        Forgot Password?
+      </p>
+      <input
+        onClick={(e) => {
+          e.preventDefault();
+          history.push("/MainHome");
+        }}
+        className='login_submit'
+        type='submit'
+        value='Log in'
+      />
       <p className='login_connect'>Or connect using</p>
       <p className='login_google'>
         <GoogleIcon /> Google
       </p>
-    </div>
+    </form>
   );
 };
 
