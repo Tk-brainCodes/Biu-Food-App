@@ -32,7 +32,8 @@
       margin-top: to-rem(15);
       @include custom_input;
     }
-    button {
+    
+    input[type="submit"] {
       padding: 0.6em 2.7em;
       background-color: $biufood_orange;
       font-weight: 700;
