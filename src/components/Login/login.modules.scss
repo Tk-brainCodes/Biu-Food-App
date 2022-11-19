@@ -26,8 +26,10 @@
     gap: 5px;
     cursor: pointer;
     margin-top: to-rem(20);
+    margin-bottom: to-rem(20);
   }
-  button {
+  
+  input[type="submit"] {
     padding: 0.6em 2.7em;
     background-color: $biufood_orange;
     font-weight: 700;
