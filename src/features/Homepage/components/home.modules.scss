@@ -25,18 +25,6 @@
         margin-top: to-rem(30);
       }
 
-      &_emailinput {
-        margin-top: to-rem(60);
-        margin-bottom: to-rem(30);
-        padding: 1em 2.85em;
-        border: 1px solid $biufood_black;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-      }
-
       span {
         color: $biufood_orange;
       }
@@ -46,12 +34,13 @@
         background-color: $biufood_orange;
         font-weight: 700;
         line-height: 22px;
+        margin-top: to-rem(50);
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-      } 
+      }
     }
 
     &_wrapper {
