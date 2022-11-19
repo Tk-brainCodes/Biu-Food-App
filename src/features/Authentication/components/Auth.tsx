@@ -7,13 +7,13 @@ const tabData = [
     tab: "Log in",
     id: 1,
     tabName: "tab1",
-    component: <LoginScreen />,
+    component: LoginScreen,
   },
   {
     tab: "Sign up",
     id: 2,
-    tabName: "tab2", 
-    component: <SignupScreen />,
+    tabName: "tab2",
+    component: SignupScreen,
   },
 ];
 
@@ -44,7 +44,7 @@ const Authentication = () => {
       <div className='auth_tabcontainer'>
         {tabData.map((content) => (
           <div key={content.id} className='auth_tabcontainer_content'>
-            {activeTab === content.tabName && content.component}
+            {activeTab === content.tabName && <content.component />}
           </div>
         ))}
       </div>
