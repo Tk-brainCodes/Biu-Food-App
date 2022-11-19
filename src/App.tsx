@@ -25,6 +25,8 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import { Search } from "./features/Search";
+import { Favorite } from "./features/Favorite";
 
 setupIonicReact();
 
@@ -47,6 +49,12 @@ const App: React.FC = () => (
         </Route>
         <Route exact path='/MainHome'>
           <MainHome />
+        </Route>
+        <Route exact path='/Search'>
+          <Search />
+        </Route>
+        <Route exact path='/Favorite'>
+          <Favorite />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

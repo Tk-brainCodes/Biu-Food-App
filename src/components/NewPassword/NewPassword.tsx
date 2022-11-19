@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import HeadBtn from "../HeadBtn/HeadBtn";
 import NewPassImg from "../../assets/images/NewPassImg.png";
 
+import { useHistory } from "react-router";
+
 const NewPassword = () => {
   const [password, setPassword] = useState({
     newPassword: "",
@@ -12,6 +14,7 @@ const NewPassword = () => {
     setPassword({ ...password, [e.target.name]: [e.target.value] });
   };
 
+  const history = useHistory()
 
   return (
     <div className='m-auto flex items-center flex-col mt-10'>
@@ -44,6 +47,10 @@ const NewPassword = () => {
         </p>
         <button
           className='bg-[#FF4545] px-[3rem] py-[0.7rem] mb-10 rounded-lg cursor-pointer font-bold'
+          onClick={(e) => {
+            e.preventDefault();
+            history.push("/auth");
+          }}
         >
           Create Password
         </button>

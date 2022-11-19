@@ -8,7 +8,7 @@ import TopPick3 from '../../assets/images/TopPick3.png'
 
 const MainHome = () => {
   return (
-    <div className=''>
+    <div className='flex flex-col min-h-[100vh]'>
         <MainNav />
         <div className='flex items-center justify-center flex-col'>
             <div className='flex gap-5 mt-[2rem]'>
