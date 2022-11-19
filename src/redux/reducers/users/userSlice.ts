@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { signupUser } from "./userAction";
+import { signupUser, loginUser } from "./userAction";
 
 export interface IValidateTypes {
-  name: string;
+  name?: string;
   email: string;
-  matNumber: string;
-  password: string;
+  matNumber?: string;
+  password?: string;
   confirmPassword?: string;
 }
 
@@ -20,7 +20,7 @@ interface InitialStateType {
 const initialState: InitialStateType = {
   userData: null,
   loading: false,
-  userToken: null,
+  userToken: "",
   error: null,
   success: false,
 };
@@ -34,24 +34,50 @@ export const userSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    //signup builder case
     builder.addCase(signupUser.fulfilled, (state, action) => {
       //set dummy token from backend
       const setToken = localStorage.setItem(
-        "token",
+        "userToken",
         action.payload.token.auth_token
       );
       //   state.token = setToken
       state.loading = false;
       state.success = true;
       state.userData = action.payload;
+      console.log({ payloadSignupFulfilled: action.payload });
     });
 
     builder.addCase(signupUser.pending, (state, action) => {
       state.loading = true;
+      console.log({ payloadSignupPending: action.payload });
     });
+
     builder.addCase(signupUser.rejected, (state, action) => {
       state.loading = false;
       state.error = true;
+      console.log({ payloadSignupRejected: action.payload });
+    });
+
+    //login builder case
+    builder.addCase(loginUser.fulfilled, (state, action) => {
+      state.userData = action.payload;
+      state.error = false;
+      state.success = true;
+      state.loading = false;
+      console.log({ payloadLoginFulfilled: action.payload });
+    });
+
+    builder.addCase(loginUser.pending, (state, action) => {
+      state.loading = true;
+      console.log({ payloadLoginPending: action.payload });
+    });
+
+    builder.addCase(loginUser.rejected, (state, action) => {
+      state.error = true;
+      state.loading = false;
+      state.success = false;
+      console.log({ payloadLoginRejected: action.payload });
     });
   },
 });

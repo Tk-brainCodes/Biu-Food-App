@@ -25,11 +25,11 @@ const Signup = () => {
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     if (data.password !== data.confimPassword) {
       alert("Password mismatch");
-      return;
+      return; 
     }
     data.email = data.email.toLowerCase();
     data.name = data.name.toLowerCase();
-    data.matNumber = data.matNumber.toLowerCase();
+    data.matNumber = data.matNumber.toLowerCase(); 
     // dispatch(signupUser(data))
   };
 
