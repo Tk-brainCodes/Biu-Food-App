@@ -10,7 +10,7 @@ const MainNav = () => {
     setSearch(e.target.value)
   }
   return (
-    <div className='flex items-center justify-center h-6 w-full gap-[4rem] mt-5 px-4'>
+    <div className='flex items-center justify-between h-6 w-full gap-[4rem] mt-5'>
         <div className='burger'>
             <AiOutlineMenu className='text-2xl cursor-pointer'/>
         </div>
