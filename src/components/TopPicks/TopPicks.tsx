@@ -8,14 +8,14 @@ import Location from "../../assets/svg/Location.svg";
 const TopPicks = ({ image }: { image: string }) => {
   return (
     <div className='w-[100%]'>
-      <div className='bg-[#FFE9E9] flex items-center justify-center gap-[2rem] p-5 my-2'>
+      <div className='bg-[#FFE9E9] flex items-center justify-center gap-[1rem] p-5 my-2'>
         <div>
           <img src={image} alt='' />
         </div>
 
         <div className='text-black'>
           <h1 className='font-bold text-[14px]'>Mc Donalds Rice</h1>
-          <p className='flex items-center gap-1'>
+          <p className='flex items-center gap-1 text-[12px]'>
             <img src={House} alt='' /> Jamie's Place
           </p>
           <div className='mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2'>

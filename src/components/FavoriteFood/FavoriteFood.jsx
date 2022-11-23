@@ -22,14 +22,14 @@ const FavoriteFood = ({ imageUrl, name, shopName, location, time, rating, charge
           <p className='flex items-center gap-1'>
             <img src={HouseImg} alt='' /> {shopName}
           </p>
-          <div className='mt-5'>
-            <p className='flex items-center gap-1 text-[10px]'>
-              <img src={LocationImg} alt='' /> {location}
-            </p>
-            <p className='flex items-center gap-1 text-[10px]'>
-              <img src={TimeImg} alt='' /> {time}
-            </p>
-          </div>
+        <div className='mt-5'>
+          <p className='flex items-center gap-1 text-[10px]'>
+            <img src={LocationImg} alt='' /> {location}
+          </p>
+          <p className='flex items-center gap-1 text-[10px]'>
+            <img src={TimeImg} alt='' /> {time}
+          </p>
+        </div>
           <p className='text-[10px] flex items-center gap-1 my-1'>
             <img src={StarImg} alt='' /> {rating}
           </p>

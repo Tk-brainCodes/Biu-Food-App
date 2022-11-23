@@ -27,6 +27,7 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 import { Search } from "./features/Search";
 import { Favorite } from "./features/Favorite";
+import { Account } from "./features/Account";
 
 setupIonicReact();
 
@@ -55,6 +56,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path='/Favorite'>
           <Favorite />
+        </Route>
+        <Route exact path='/Account'>
+          <Account />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

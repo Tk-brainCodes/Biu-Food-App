@@ -11,7 +11,7 @@ import { useHistory } from 'react-router'
 const Footer = () => {
     const history = useHistory()
   return (
-    <div className='flex items-center justify-center mt-auto gap-10 mt-[5rem] p-4 sticky bottom-0 left-0 bg-black'>
+    <div className='flex items-center justify-center mt-auto gap-10 p-4 sticky bottom-0 left-0 bg-black'>
         <div className='cursor-pointer'
             onClick={(e) => {
             e.preventDefault();
@@ -39,7 +39,12 @@ const Footer = () => {
         <div className='cursor-pointer'>
             <img src={CartIcon} alt="" />
         </div>
-        <div className='cursor-pointer'>
+        <div className='cursor-pointer'
+            onClick={(e) => {
+                e.preventDefault();
+                history.push("/Account")
+            }}
+        >
             <img src={AccountIcon} alt="" />
         </div>
     </div>
