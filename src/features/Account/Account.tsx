@@ -1,9 +1,16 @@
 import React from 'react'
 import { AccountLinks, Footer, MainNav } from '../../components'
+import { AccountData } from "./AccountData";
 import ProfileImg from '../../assets/svg/Profile.png'
 
 
-import { AccountData } from './AccountData'
+interface IAccountType {
+   ImageUrl: string,
+   name: string,
+   id: number
+}
+
+
 // w-[80%] m-auto sm:w-[60%] md:w-[40%] xl:w-[30%]
 const Account = () => {
   return (
@@ -15,11 +22,12 @@ const Account = () => {
           <img src={ProfileImg} alt="" />
         </div>
         <div className='flex flex-col gap-10 items-start mt-10'>
-          {AccountData.map(item => {
+          {AccountData.map((item : IAccountType) => {
             return (
               <AccountLinks 
                 ImageUrl={item.ImageUrl}
                 name={item.name} 
+                key={item.id}
               />
             )
           })}
