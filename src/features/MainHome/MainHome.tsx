@@ -6,11 +6,13 @@ import HomeFoodPic from "../../assets/images/HomeFoodPic.png";
 import TopPick1 from "../../assets/images/TopPick1.png";
 import TopPick2 from "../../assets/images/TopPick2.png";
 import TopPick3 from "../../assets/images/TopPick3.png";
+import AnimatedPage from "../../components/AnimatedPage";
 
 const MainHome = () => {
   const history = useHistory();
 
   return (
+    <AnimatedPage>
     <div className='min-h-[100vh] flex flex-col'>
       <div className='w-[90%] mx-auto'>
         <MainNav />
@@ -44,6 +46,7 @@ const MainHome = () => {
       </div>
       <Footer />
     </div>
+    </AnimatedPage>
   );
 };
 

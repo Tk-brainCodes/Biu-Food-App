@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { LoginScreen, SignupScreen } from "../../../components";
+import AnimatedPage from "../../../components/AnimatedPage";
 import "./auth.modules.scss";
 
 const tabData = [
@@ -25,6 +26,7 @@ const Authentication = () => {
   }, [activeTab]);
 
   return (
+    <AnimatedPage>
     <div className='auth'>
       <div className='auth_tabview'>
         {tabData.map((tabs) => (
@@ -49,6 +51,7 @@ const Authentication = () => {
         ))}
       </div>
     </div>
+    </AnimatedPage>
   );
 };
 export default Authentication;

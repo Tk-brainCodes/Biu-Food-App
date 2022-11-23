@@ -34,7 +34,7 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonRouterOutlet style={{overflow: 'auto'}}>
+      <IonRouterOutlet style={{overflowX: 'hidden', overflowY: 'auto'}}>
         <Route exact path='/home'>
           <HomepageScreen />
         </Route>

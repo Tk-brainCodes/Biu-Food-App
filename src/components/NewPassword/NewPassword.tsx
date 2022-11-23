@@ -3,6 +3,7 @@ import HeadBtn from "../HeadBtn/HeadBtn";
 import NewPassImg from "../../assets/images/NewPassImg.png";
 
 import { useHistory } from "react-router";
+import AnimatedPage from "../AnimatedPage";
 
 const NewPassword = () => {
   const [password, setPassword] = useState({
@@ -17,6 +18,7 @@ const NewPassword = () => {
   const history = useHistory()
 
   return (
+    <AnimatedPage>
     <div className='m-auto flex items-center flex-col mt-10'>
       <HeadBtn title='New Password' />
       <div className=''>
@@ -56,6 +58,7 @@ const NewPassword = () => {
         </button>
       </div>
     </div>
+    </AnimatedPage>
   );
 };
 
