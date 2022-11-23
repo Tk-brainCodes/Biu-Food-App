@@ -1,54 +1,117 @@
-import React from 'react'
+import React from "react";
 
-import HomeIcon from '../../assets/svg/HomeIcon.svg'
-import SearchIcon from '../../assets/svg/SearchIcon.svg'
-import FavIcon from '../../assets/svg/FavIcon.svg'
-import CartIcon from '../../assets/svg/CartIcon.svg'
-import AccountIcon from '../../assets/svg/AccountIcon.svg'
+import {
+  IconHome2,
+  IconSearch,
+  IconHeart,
+  IconShoppingCart,
+  IconUser,
+} from "@tabler/icons";
 
-import { useHistory } from 'react-router'
+import { useHistory, useLocation } from "react-router";
 
 const Footer = () => {
-    const history = useHistory()
+  const history = useHistory();
+  const location = useLocation();
+
   return (
     <div className='flex items-center justify-center mt-auto gap-10 p-4 sticky bottom-0 left-0 bg-black'>
-        <div className='cursor-pointer'
-            onClick={(e) => {
-            e.preventDefault();
-            history.push("/MainHome");
-            }}
+      <div
+        className='cursor-pointer'
+        onClick={(e) => {
+          e.preventDefault();
+          history.push("/MainHome");
+        }}
+      >
+        <IconHome2
+          color={`${location.pathname === "/MainHome" ? "#FF4545" : "#fff"}`}
+          size={35}
+        />
+        <p
+          style={{
+            color: `${location.pathname === "/MainHome" ? "#FF4545" : "#fff"}`,
+          }}
+          className='text-xs text-center'
         >
-            <img src={HomeIcon} alt="" />
-        </div>
-        <div className='cursor-pointer'
-            onClick={(e) => {
-            e.preventDefault();
-            history.push("/Search");
-            }}
+          Home
+        </p>
+      </div>
+      <div
+        className='cursor-pointer'
+        onClick={(e) => {
+          e.preventDefault();
+          history.push("/Search");
+        }}
+      >
+        <IconSearch
+          color={`${location.pathname === "/Search" ? "#FF4545" : "#fff"}`}
+          size={35}
+        />
+        <p
+          style={{
+            color: `${location.pathname === "/Search" ? "#FF4545" : "#fff"}`,
+          }}
+          className='text-xs text-center'
         >
-            <img src={SearchIcon} alt="" />
-        </div>
-        <div className='cursor-pointer'
-            onClick={(e) => {
-            e.preventDefault();
-            history.push("/Favorite");
-            }}
+          Search
+        </p>
+      </div>
+      <div
+        className='cursor-pointer'
+        onClick={(e) => {
+          e.preventDefault();
+          history.push("/Favorite");
+        }}
+      >
+        <IconHeart
+          color={`${location.pathname === "/Favorite" ? "#FF4545" : "#fff"}`}
+          size={35}
+        />
+        <p
+          style={{
+            color: `${location.pathname === "/Favorite" ? "#FF4545" : "#fff"}`,
+          }}
+          className='text-xs text-center'
         >
-            <img src={FavIcon} alt="" />
-        </div>
-        <div className='cursor-pointer'>
-            <img src={CartIcon} alt="" />
-        </div>
-        <div className='cursor-pointer'
-            onClick={(e) => {
-                e.preventDefault();
-                history.push("/Account")
-            }}
+          Favorites
+        </p>
+      </div>
+      <div className='cursor-pointer'>
+        <IconShoppingCart
+          color={`${location.pathname === "/Cart" ? "#FF4545" : "#fff"}`}
+          size={35}
+        />
+        <p
+          className='text-xs text-center'
+          style={{
+            color: `${location.pathname === "/Cart" ? "#FF4545" : "#fff"}`,
+          }}
         >
-            <img src={AccountIcon} alt="" />
-        </div>
+          Cart
+        </p>
+      </div>
+      <div
+        className='cursor-pointer'
+        onClick={(e) => {
+          e.preventDefault();
+          history.push("/Account");
+        }}
+      >
+        <IconUser
+          color={`${location.pathname === "/Account" ? "#FF4545" : "#fff"}`}
+          size={35}
+        />
+        <p
+          style={{
+            color: `${location.pathname === "/Account" ? "#FF4545" : "#fff"}`,
+          }}
+          className='text-xs text-center'
+        >
+          Account
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,4 +1,8 @@
-export const FoodSearchData = [
+export const FoodSearchData: {
+    id: number,
+    name: string,
+    imageUrl: string
+}[] = [
     {
         id:1,
         name: 'African Dish',

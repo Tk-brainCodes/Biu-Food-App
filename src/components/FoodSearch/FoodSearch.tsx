@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FoodSearch = ({imageUrl, name}) => {
+const FoodSearch = ({imageUrl, name}: {imageUrl: string, name: string}) => {
   return (
     <div className='min-w[10rem] relative'>
       <div className="image">
