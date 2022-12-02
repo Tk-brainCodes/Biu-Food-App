@@ -5,15 +5,16 @@ import { HiAdjustmentsVertical } from "react-icons/hi2";
 import { TbMapPin } from "react-icons/tb";
 
 import Logo from '../../assets/svg/Logo.svg'
-import Profile from '../../assets/svg/Profile.svg'
-import Notifs from '../../assets/svg/Notifs.svg'
-import Payment from '../../assets/svg/Payment.svg'
-import Promo from '../../assets/svg/Promo.svg'
-import About from '../../assets/svg/About.svg'
-import Address from '../../assets/svg/Address.svg'
-import Gift from '../../assets/svg/Gift.svg'
-import Wishlist from '../../assets/svg/Wishlist.svg'
-import { Favorite } from "../../features/Favorite";
+
+import { CgProfile } from "react-icons/cg";
+import { GoLocation } from "react-icons/go";
+import { CiCreditCard1 } from "react-icons/ci"
+import { AiOutlineHeart } from "react-icons/ai"
+import { AiOutlineInfoCircle } from "react-icons/ai"
+import { BiNotification } from "react-icons/bi"
+import { BsCreditCard2Back } from "react-icons/bs"
+import { AiOutlineGift } from "react-icons/ai"
+import { TbJewishStar } from "react-icons/tb"
 
 const MainNav = () => {
   const [search, setSearch] = useState("");
@@ -57,15 +58,15 @@ const MainNav = () => {
             <img src={Logo} alt="" className="w-[100px] sm:w-[200px] md:w-[250px]" />
           </div>
           <div className="w-full h-[2px] bg-[#D9D9D9]"></div>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={Profile} alt="" /> Profile</li>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={Address} alt="" /> Addresses</li>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={Promo} alt="" /> Promo Codes</li>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={Wishlist} alt="" /> Wishlist</li>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={Profile} alt="" /> Favorites</li>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={About} alt="" /> About Us</li>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={Notifs} alt="" /> Notifications</li>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={Payment} alt="" /> Payment</li>
-          <li className='ml-[2rem] flex gap-2 items-center'><img src={Gift} alt="" /> Send Us A Gift</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><CgProfile /> Profile</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><GoLocation /> Addresses</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><CiCreditCard1 /> Promo Codes</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><TbJewishStar />Wishlist</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><AiOutlineHeart/> Favorites</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><AiOutlineInfoCircle/> About Us</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><BiNotification /> Notifications</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><BsCreditCard2Back /> Payment</li>
+          <li className='ml-[2rem] flex gap-2 items-center'><AiOutlineGift /> Send Us A Gift</li>
         </ul>
       </div>
   );

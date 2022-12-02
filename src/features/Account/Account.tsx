@@ -4,15 +4,12 @@ import { AccountData } from "./AccountData";
 import ProfileImg from '../../assets/svg/Profile.png'
 import AnimatedPage from '../../components/AnimatedPage';
 
-
 interface IAccountType {
    ImageUrl: string,
    name: string,
    id: number
 }
 
-
-// w-[80%] m-auto sm:w-[60%] md:w-[40%] xl:w-[30%]
 const Account = () => {
   return (
     <AnimatedPage>
