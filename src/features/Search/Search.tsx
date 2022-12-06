@@ -1,7 +1,8 @@
 import React,{ useState } from 'react'
 
-import searchIcon from '../../assets/svg/SearchIcon.svg'
+import { TbSearch } from "react-icons/tb"
 import { FoodSearch, Footer } from '../../components'
+import AnimatedPage from '../../components/AnimatedPage'
 import { FoodSearchData } from '../../components/FoodSearch/FoodSearchData'
 
 interface ISearchType {
@@ -17,10 +18,11 @@ const Search = () => {
     };
 
     return (
+    <AnimatedPage>
     <div className='flex flex-col min-h-[100vh]'>
         <div className='flex flex-col items-center justify-center'>
-            <div className="flex w-[90%] mx-10 sm:w-[30%] md:w-[30%] lg:w-[30%] gap-5 mt-5 border rounded-full px-7 py-2">
-                <img width={20} height={20} src={searchIcon} alt="searchIcon" className=' bottom-[0.1rem] left-3'/>
+            <div className="flex items-center justify-center w-[90%] mx-10 sm:w-[30%] md:w-[30%] lg:w-[30%] gap-5 mt-5 border rounded-full px-7 py-2">
+                <TbSearch className='text-3xl'/>
                  <input 
                     type="search" 
                     name="search"  
@@ -44,6 +46,7 @@ const Search = () => {
         </div>
         <Footer />
     </div>
+    </AnimatedPage>
   )
 }
 

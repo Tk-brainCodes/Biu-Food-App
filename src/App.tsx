@@ -25,16 +25,19 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+
 import { Search } from "./features/Search";
 import { Favorite } from "./features/Favorite";
 import { Account } from "./features/Account";
+import { Checkout } from "./features/CheckoutPage";
+import { Feedback } from "./features/Feedback";
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonRouterOutlet style={{overflow: 'auto'}}>
+      <IonRouterOutlet style={{overflowX: 'hidden', overflowY: 'auto'}}>
         <Route exact path='/home'>
           <HomepageScreen />
         </Route>
@@ -59,6 +62,12 @@ const App: React.FC = () => (
         </Route>
         <Route exact path='/Account'>
           <Account />
+        </Route>
+        <Route exact path='/Checkout'>
+          <Checkout />
+        </Route>
+        <Route exact path='/Feedback'>
+          <Feedback />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

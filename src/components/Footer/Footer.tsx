@@ -76,7 +76,13 @@ const Footer = () => {
           Favorites
         </p>
       </div>
-      <div className='cursor-pointer'>
+      <div 
+        className='cursor-pointer'
+        onClick={(e) => {
+          e.preventDefault();
+          history.push("/Checkout");
+        }}
+      >
         <IconShoppingCart
           color={`${location.pathname === "/Cart" ? "#FF4545" : "#fff"}`}
           size={35}

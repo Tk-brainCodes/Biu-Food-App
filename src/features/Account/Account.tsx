@@ -2,7 +2,7 @@ import React from 'react'
 import { AccountLinks, Footer, MainNav } from '../../components'
 import { AccountData } from "./AccountData";
 import ProfileImg from '../../assets/svg/Profile.png'
-
+import AnimatedPage from '../../components/AnimatedPage';
 
 interface IAccountType {
    ImageUrl: string,
@@ -10,10 +10,9 @@ interface IAccountType {
    id: number
 }
 
-
-// w-[80%] m-auto sm:w-[60%] md:w-[40%] xl:w-[30%]
 const Account = () => {
   return (
+    <AnimatedPage>
     <div className='min-h-[100vh] flex flex-col'>
       <div className='w-[90%] mx-auto'>
         <MainNav />
@@ -36,6 +35,7 @@ const Account = () => {
       </div>
       <Footer />
     </div>
+    </AnimatedPage>
   )
 }
 

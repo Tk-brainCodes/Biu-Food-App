@@ -6,6 +6,7 @@ import { selectUserData } from "../../redux/reducers/appSelector";
 import "./login.modules.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser } from "../../redux/reducers/users/userAction";
+import AnimatedPage from "../AnimatedPage";
 
 type FormValues = {
   email: string;
@@ -28,6 +29,7 @@ const Login = () => {
   };
 
   return (
+    <AnimatedPage>
     <form onSubmit={handleSubmit(onSubmit)} className='login'>
       <div className='login_imagecontainer' />
       <input
@@ -78,6 +80,7 @@ const Login = () => {
         <GoogleIcon /> Google
       </p>
     </form>
+    </AnimatedPage>
   );
 };
 

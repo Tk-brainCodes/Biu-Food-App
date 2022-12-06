@@ -1,5 +1,6 @@
 import React from 'react'
 import { FavoriteFood, Footer, MainNav } from '../../components'
+import AnimatedPage from '../../components/AnimatedPage';
 
 import { FoodData } from './FoodData'
 
@@ -16,11 +17,12 @@ interface IFavoriteType {
 
 const Favorite = () => {
   return (
-    <div className='flex flex-col min-h-[100vh]'>
-      <div className='w-[90%] mx-auto '>
+    <AnimatedPage>
+    <div className='flex flex-col itens-center justify-center min-h-[100vh]'>
+      <div className='w-[90%] mx-auto flex flex-col items-center justify-center'>
         <MainNav />
-        <div className='mt-5 flex items-center justify-center flex-col'>
-          <h1 className='text-2xl text-[#FF4545] font-bold'>Favorite</h1>
+        <div className='mt-[4rem] flex items-center flex-col'>
+          <h1 className='self-start text-2xl text-[#FF4545] font-bold'>Favorite</h1>
           {FoodData.map((item: IFavoriteType) => {
               return (
                 <FavoriteFood
@@ -39,6 +41,7 @@ const Favorite = () => {
       </div>
       <Footer />
     </div>
+    </AnimatedPage>
   )
 }
 

@@ -5,6 +5,7 @@ import { selectUserData } from "../../redux/reducers/appSelector";
 import { signupUser } from "../../redux/reducers/users/userAction";
 import { useSelector, useDispatch } from "react-redux";
 import "./signup.modules.scss";
+import AnimatedPage from "../AnimatedPage";
 
 type FormValues = {
   name: string;
@@ -34,6 +35,7 @@ const Signup = () => {
   };
 
   return (
+    <AnimatedPage>
     <div className='signup'>
       <form onSubmit={handleSubmit(onSubmit)} className='signup_input'>
         <input
@@ -82,6 +84,7 @@ const Signup = () => {
         />
       </form>
     </div>
+    </AnimatedPage>
   );
 };
 

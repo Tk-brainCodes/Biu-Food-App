@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import HeadBtn from "../HeadBtn/HeadBtn";
 import { useHistory } from "react-router";
+import AnimatedPage from "../AnimatedPage";
 
 const Verification = () => {
   const [input, setInput] = useState({
@@ -19,6 +20,7 @@ const Verification = () => {
   const history = useHistory();
 
   return (
+    <AnimatedPage>
     <div className='max-w-[100%] m-auto flex items-center flex-col mt-10'>
       <HeadBtn title='Verification' />
       <div>
@@ -93,6 +95,7 @@ const Verification = () => {
         </div>
       </div>
     </div>
+    </AnimatedPage>
   );
 };
 
