@@ -5,7 +5,7 @@ import { HomepageScreen } from "./features/Homepage/components";
 import { AuthPage } from "./features/Authentication/components";
 import { Verification } from "./components";
 import { NewPassword } from "./components";
-import { MainHome } from "./features/MainHome";
+import  MainHome  from "./features/MainHome/MainHome";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -26,11 +26,11 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 
-import { Search } from "./features/Search";
 import { Favorite } from "./features/Favorite";
 import { Account } from "./features/Account";
 import { Checkout } from "./features/CheckoutPage";
 import { Feedback } from "./features/Feedback";
+import Search from  './features/Search/Search'
 
 setupIonicReact();
 
