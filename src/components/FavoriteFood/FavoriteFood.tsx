@@ -8,12 +8,12 @@ import LocationImg from "../../assets/svg/Location.svg";
 
 interface ICardTypes {
   imageUrl: string;
-  name: string;
+  name: string; 
   shopName: string;
   location: string;
-  time: number;
-  rating: number;
-  charge: number;
+  time: string;
+  rating: string;
+  charge: string;
 }
 
 const FavoriteFood = ({
