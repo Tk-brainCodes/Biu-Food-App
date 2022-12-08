@@ -4,7 +4,7 @@ import AnimatedPage from '../AnimatedPage';
 const Cart = () => {
     const [ amount, setAmount ] = useState(1)
 
-    const increment = (id) => {
+    const increment = () => {
       if (amount >= 20) return;
       setAmount(amount + 1)
     }
