@@ -74,7 +74,7 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "4.4.0",
+    "@capacitor/cli": "4.8.0",
     "autoprefixer": "^9.8.8",
     "postcss": "^8.4.19",
     "postcss-cli": "^10.0.0",
